@@ -1,0 +1,182 @@
+/* ---------- Design tokens: change these to personalize your site ---------- */
+:root {
+  --bg: #f2f6f8;          /* page background */
+  --surface: #ffffff;     /* project boxes */
+  --ink: #14213d;         /* main text */
+  --muted: #475569;       /* secondary text */
+  --accent: #0f766e;      /* links, buttons, plot dots */
+  --accent-dark: #0b5650; /* hover */
+  --line: #cfdbe2;        /* borders */
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.35rem; }
+
+p { margin: 0 0 1em; max-width: 65ch; }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-dark); }
+
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 20;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Header / navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.site-header nav {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;          /* lets the nav wrap on narrow screens */
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+.site-header ul a { text-decoration: none; font-weight: 600; }
+.site-header ul a:hover { text-decoration: underline; }
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+main > section { padding: 3rem 0; border-bottom: 1px solid var(--line); }
+main > section:last-child { border-bottom: 0; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 4rem;
+}
+.headline {
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+.hero-art { width: 100%; height: auto; }
+.hero-art circle { fill: var(--accent); }
+.hero-art .axis { stroke: var(--muted); stroke-width: 2; }
+.hero-art .trend { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 6 5; }
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { background: var(--accent-dark); color: #fff; }
+
+/* ---------- Skills ---------- */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+.skills li {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 0.9rem 1rem;
+}
+.skills strong { display: block; font-size: 1.1rem; }
+.skills span { color: var(--muted); font-size: 1rem; }
+
+/* ---------- Projects ---------- */
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: anywhere;   /* long links never push the box wider than the screen */
+}
+.project p:last-child { margin-bottom: 0; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 700px) {
+  body { font-size: 1.05rem; }
+  .hero { grid-template-columns: 1fr; padding-top: 2.5rem; }
+  .hero-art { max-width: 14rem; }
+  main > section { padding: 2rem 0; }
+}
+
+/* ---------- Respect reduced-motion settings ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
