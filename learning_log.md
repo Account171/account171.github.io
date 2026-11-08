@@ -8,6 +8,8 @@
 - Commit 1: "Create portfolio structure" (date). Added index.html, style.css, README.md, and learning_log.md.
 - Commit 2: "Add content and personalize styling" (date). Replaced placeholders with my own name, skills, and projects, and changed the colors in style.css.
 - Commit 3: Add Copilot suggestions
+- Extra Commit 4: Save Changes
+- Extra Commit 5: Save Changes
 
 **Pull practice:** Date and what I pulled at the start of a later session:
 
