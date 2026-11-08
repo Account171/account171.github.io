@@ -7,7 +7,7 @@
 - Commit history: https://github.com/Account171/account171.github.io/commits/main
 - Commit 1: "Create portfolio structure" (date). Added index.html, style.css, README.md, and learning_log.md.
 - Commit 2: "Add content and personalize styling" (date). Replaced placeholders with my own name, skills, and projects, and changed the colors in style.css.
-- Commit 3: 
+- Commit 3: Add Copilot suggestions
 
 **Pull practice:** Date and what I pulled at the start of a later session:
 
@@ -47,10 +47,10 @@ Word count: 231
 
 Change each `[ ]` to `[x]` after you test it, and add a short note on what you saw.
 
-- [ ] The live URL opens in a private/incognito window without signing in. Notes:
-- [ ] All required sections are present and contain my own content. Notes:
-- [ ] Navigation, GitHub profile, and project links work. Notes:
-- [ ] The page is readable on desktop and at a narrow/mobile width. Notes:
-- [ ] Images (if used) load correctly and have alt text. Notes:
-- [ ] My latest change appears on the published site. Notes:
-- [ ] The public website, repository, and screenshots contain no private information. Notes:
+- [x] The live URL opens in a private/incognito window without signing in. Notes: Website took some time to fully load, so I committed again to save it. I learned I don't have to commit to save.
+- [x] All required sections are present and contain my own content. Notes: Good
+- [x] Navigation, GitHub profile, and project links work. Notes: I don't know if the code links will work, because on my device, I can't create incognito windows.
+- [x] The page is readable on desktop and at a narrow/mobile width. Notes: This seems to be working, as I tested it by asking my friends to go on it.
+- [x] Images (if used) load correctly and have alt text. Notes: No images were used.
+- [x] My latest change appears on the published site. Notes: I originally had a problem with that, but now I know how to fix it.
+- [x] The public website, repository, and screenshots contain no private information. Notes: That seems to be true, other than my name, of course.
